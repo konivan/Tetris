@@ -17,4 +17,24 @@ function drawSquare(y, x, color) {
   };
 
   ctx.strokeRect(x * squares, y * squares, squares, squares);
+};
+
+
+function randomPiece() {
+  const randomPieceNumber = Math.floor(Math.random() * PIECES.length);
+  return new Piece(
+    PIECES[randomPieceNumber][0],
+    PIECES[randomPieceNumber][1],
+    );
+};
+
+
+function drop() {
+  const now = Date.now();
+  const delta = now - dropStart;
+
+  if (delta > speed) {
+    piece.moveDown();
+    dropStart = Date.now();
+  }
 }
