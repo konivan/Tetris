@@ -7,15 +7,15 @@ class Piece {
     this.activePiece = this.piece[this.pieceN];
 
     this.x = 3;
-    this.y = 2;
+    this.y = -2;
   };
 
   fill(color) {
     for (let currentRow = 0; currentRow < this.activePiece.length; currentRow++) {
-      for(let currentCol = 0; currentCol < this.activePiece; currentCol++) {
+      for(let currentCol = 0; currentCol < this.activePiece.length; currentCol++) {
         if (this.activePiece[currentRow][currentCol]) {
            drawSquare(this.y + currentRow, this.x + currentCol, color);
-        }
+        };
       };
     };
   };
@@ -29,6 +29,9 @@ class Piece {
   }
 
   moveDown() {
-
-  }
+    this.unDraw();
+    this.y++;
+    this.draw();
+    return;
+  };
 };

@@ -36,5 +36,6 @@ function drop() {
   if (delta > speed) {
     piece.moveDown();
     dropStart = Date.now();
-  }
-}
+  };
+  requestAnimationFrame(drop);
+};

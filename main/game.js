@@ -34,3 +34,6 @@ const PIECES = [
 ];
 
 let piece = randomPiece();
+
+drop();
+
