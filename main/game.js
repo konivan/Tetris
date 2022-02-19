@@ -7,7 +7,7 @@ const row = 20;
 const col = 10;
 const squares = 30;
 const defaultColor = "#111111";
-const defaultBorder = "rgba(255,255,255,0.1)";
+const defaultBorder = "0.5px rgba(255,255,255,0.1)";
 
 let canMove = true;
 let speed = 500;
