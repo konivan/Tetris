@@ -8,27 +8,29 @@
   <style>
     body {
       background-color: #333333;
+      overflow-y: hidden;
       color: #ffffff;
     }
     #score #speed {
       display: inline-block;
     }
-    div {
+    .info {
       font-size: 25px;
       font-weight: bold;
       font-family: monospace;
       text-align: center;
     }
-    canvas {
+    #tetris {
       display: block;
       margin: 0 auto;
       margin-top: 80px;
     }
+
   </style>
 </head>
 <body>
   <canvas id="tetris" width="320" height="610"></canvas>
-  <div>
+  <div class="info">
     <p>
       Score: <span id="score"></span>
     </p>
@@ -36,9 +38,9 @@
       Speed: <span id="speed"></span>
     </p>
   </div>
-  <script src="./piece.js"></script>
-  <script src="./tetromino.js"></script>
-  <script src="./functions.js"></script>
-  <script src="./game.js"></script>
+  <script src="./main/piece.js"></script>
+  <script src="./main/tetromino.js"></script>
+  <script src="./main/functions.js"></script>
+  <script src="./main/game.js"></script>
 </body>
 </html>
