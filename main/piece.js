@@ -44,6 +44,16 @@ class Piece {
     };
   };
 
+ space() {
+   while (!this.collision(0, 1, this.activePiece)) {
+     this.unDraw();
+     this.y++;
+     this.draw();
+  };
+};
+
+
+
   rotate() {
     let nextPattern = this.piece[(this.pieceN + 1) % this.piece.length];
     let kick = 0;

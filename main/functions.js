@@ -28,7 +28,7 @@ function randomPiece() {
   return new Piece(
     PIECES[randomPieceNumber][0],
     PIECES[randomPieceNumber][1],
-    );
+  );
 };
 
 
@@ -64,6 +64,9 @@ function control(event) {
     },
     ArrowDown() {
       piece.moveDown();
+    },
+    Space() {
+      piece.space();
     },
   };
 
@@ -118,4 +121,4 @@ function resetrGame() {
   };
   piece = randomPiece();
   drawBoard();
-}
+};
